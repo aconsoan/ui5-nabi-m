@@ -9,7 +9,7 @@
     top: 0 !important;
 }
 
-.pdfViewer:focus {
+#viewerContainer:focus {
     outline-width : thick !important;
     outline-color: white !important;
     outline-style: solid !important;
