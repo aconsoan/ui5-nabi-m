@@ -47,7 +47,9 @@ sap.ui.define([
 				  * of the browser is violated. For security reasons per default only "remote" PDF files
 				  * are rejected and thus also fail to be loaded. This might change in future.
 				  */
-				 source: {type: "sap.ui.core.URI", group: "Misc", defaultValue: null}
+				 source: {type: "sap.ui.core.URI", group: "Misc", defaultValue: null},
+				 /** Show Toolbar */
+				 showToolbar : {type: "boolean", defaultValue: true}
 			},
 
 			aggregations: { },

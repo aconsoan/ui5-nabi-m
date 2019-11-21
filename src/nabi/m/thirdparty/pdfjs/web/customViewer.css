@@ -1,0 +1,17 @@
+/* HIDE TOOLBAR*/
+
+#outerContainer #mainContainer div.toolbar {
+    display: none !important;
+    opacity: 0.5 !important;
+}
+
+#outerContainer #mainContainer #viewerContainer {
+    top: 0 !important;
+}
+
+.pdfViewer:focus {
+    outline-width : thick !important;
+    outline-color: white !important;
+    outline-style: solid !important;
+    border: 5px solid white;
+}

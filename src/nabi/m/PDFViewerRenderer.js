@@ -7,9 +7,10 @@ sap.ui.define([
 ], function(jQuery) {
 		"use strict";
 
-		var sViewerPath, sThirdPartyPath;
+		var sViewerPath, sThirdPartyPath, sViewerPathNoToolbar;
 		sThirdPartyPath = jQuery.sap.getModulePath("nabi.m.thirdparty");
 		sViewerPath = sThirdPartyPath + "/pdfjs/web/viewer.html";
+		sViewerPathNoToolbar = sThirdPartyPath + "/pdfjs/web/viewer-notoolbar.html";
 
 		/**
 		 * Example renderer.
@@ -31,7 +32,7 @@ sap.ui.define([
 			oRm.addClass("nabiMPDFViewer");
 			oRm.writeClasses();
 
-			oRm.writeAttribute("src", sViewerPath + "?file=" + encodeURIComponent(oControl.getSource()) );
+			oRm.writeAttribute("src", (oControl.getShowToolbar() ? sViewerPath : sViewerPathNoToolbar) + "?file=" + encodeURIComponent(oControl.getSource()) );
 			oRm.writeAttribute("height", oControl.getHeight());
 			oRm.writeAttribute("width", oControl.getWidth());
 
